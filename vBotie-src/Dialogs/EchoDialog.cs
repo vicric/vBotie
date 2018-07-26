@@ -128,13 +128,23 @@ namespace Microsoft.Bot.Sample.SimpleEchoBot
 
             // setup a message that can hold the generated image
             var replyMessage = context.MakeMessage();
-            var image = new Attachment();
-            //image.ContentType = "image/jpeg";
-            image.ContentType = "gif";
-            //image.ContentUrl = $"data:image/jpeg;base64," +
-            //    $"{ stickerresult.Data.ImageUrl }";
-            image.ContentUrl = stickerresult.Data.ImageUrl;
-            replyMessage.Attachments = new List<Attachment> { image };
+
+            var animationCard = new AnimationCard
+            {
+                Image = new ThumbnailUrl
+                {
+                    Url = "https://docs.microsoft.com/en-us/bot-framework/media/how-it-works/architecture-resize.png"
+                },
+                Media = new List<MediaUrl>
+                {
+                    new MediaUrl()
+                    {
+                        Url = stickerresult.Data.FixedHeightSmallUrl
+                    }
+                }
+            };
+
+            replyMessage.Attachments = new List<Attachment> { animationCard.ToAttachment() };
 
             // return our reply to the user
             await context.PostAsync(replyMessage);
