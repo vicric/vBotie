@@ -41,8 +41,8 @@ namespace Microsoft.Bot.Sample.SimpleEchoBot
             }
             else if (message.Text == "set choice")
             {
-                var options = new int[] {10, 100, 1000, 2000};
-                var descriptions = new string[]{"Set count to 10", "Set count to 100", "Set count to 1000", "Set count to 2000"};
+                var options = new int[] {10, 100, 1000, 3000};
+                var descriptions = new string[]{"Set count to 10", "Set count to 100", "Set count to 1000", "Set count to 3000"};
                 PromptDialog.Choice<int>(
                     context,
                     AfterSetChoiceAsync,
