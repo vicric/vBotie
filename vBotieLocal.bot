@@ -1,0 +1,15 @@
+{
+    "name": "vBotie",
+    "description": "",
+    "secretKey": "",
+    "services": [
+        {
+            "appId": "",
+            "id": "11eb8cb0-90ff-11e8-bd9a-cf6327339dc2",
+            "type": "endpoint",
+            "appPassword": "",
+            "endpoint": "http://localhost:3984/api/messages",
+            "name": "http://localhost:3984/api/messages"
+        }
+    ]
+}

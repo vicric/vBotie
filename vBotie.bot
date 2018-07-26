@@ -2,14 +2,5 @@
     "name": "vBotie",
     "description": "",
     "secretKey": "",
-    "services": [
-        {
-            "appId": "c7f22bac-e504-43c0-a0fa-87c6fcea1434",
-            "id": "fc11da80-90bc-11e8-8729-07eff276063c",
-            "type": "endpoint",
-            "appPassword": "COdJ;1T-?k^1dQc7",
-            "endpoint": "https://vbotie.azurewebsites.net/api/messages",
-            "name": "https://vbotie.azurewebsites.net/api/messages"
-        }
-    ]
+    "services": []
 }
